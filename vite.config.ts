@@ -15,8 +15,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
     open: true,
   },
-  base: './',
+  base: '/UGU-clouding/', // <--- ВАЖНО для GitHub Pages
 });
