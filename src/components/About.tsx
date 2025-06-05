@@ -108,26 +108,26 @@ const About: React.FC = () => {
   }, [isAnimationStarted, t]);
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 fade-in-section">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="about" className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 fade-in-section">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
             {t('about.subtitle')}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
           <div className="fade-in-section">
-            <h3 className="text-2xl font-semibold mb-4">{t('about.ourStory.title')}</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">{t('about.ourStory.title')}</h3>
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
               {t('about.ourStory.paragraph1')}
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
               {t('about.ourStory.paragraph2')}
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm sm:text-base">
               {t('about.ourStory.paragraph3')}
             </p>
           </div>
@@ -139,80 +139,80 @@ const About: React.FC = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <div className="text-emerald-500 text-4xl mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          <div className="bg-gray-50 p-6 sm:p-8 rounded-lg text-center fade-in-section">
+            <div className="text-emerald-500 text-3xl sm:text-4xl mb-3 sm:mb-4">
               <i className="fas fa-tshirt"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">{t('about.features.quality.title')}</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('about.features.quality.title')}</h3>
+            <p className="text-gray-600 text-sm sm:text-base">
               {t('about.features.quality.description')}
             </p>
           </div>
-          <div className="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <div className="text-emerald-500 text-4xl mb-4">
+          <div className="bg-gray-50 p-6 sm:p-8 rounded-lg text-center fade-in-section">
+            <div className="text-emerald-500 text-3xl sm:text-4xl mb-3 sm:mb-4">
               <i className="fas fa-leaf"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">{t('about.features.eco.title')}</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('about.features.eco.title')}</h3>
+            <p className="text-gray-600 text-sm sm:text-base">
               {t('about.features.eco.description')}
             </p>
           </div>
-          <div className="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <div className="text-emerald-500 text-4xl mb-4">
+          <div className="bg-gray-50 p-6 sm:p-8 rounded-lg text-center fade-in-section">
+            <div className="text-emerald-500 text-3xl sm:text-4xl mb-3 sm:mb-4">
               <i className="fas fa-heart"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">{t('about.features.comfort.title')}</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('about.features.comfort.title')}</h3>
+            <p className="text-gray-600 text-sm sm:text-base">
               {t('about.features.comfort.description')}
             </p>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-emerald-100 to-teal-100 p-10 rounded-xl stats-section fade-in-section">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div className="bg-gradient-to-r from-emerald-100 to-teal-100 p-6 sm:p-8 md:p-10 rounded-xl stats-section fade-in-section">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div>
               <div
-                className="text-4xl font-bold text-emerald-500 mb-2 animate-number"
+                className="text-3xl sm:text-4xl font-bold text-emerald-500 mb-2 animate-number"
                 data-target="5"
               >
                 0
               </div>
-              <p className="text-gray-700">{t('about.stats.years')}</p>
+              <p className="text-gray-700 text-sm sm:text-base">{t('about.stats.years')}</p>
             </div>
             <div>
               <div
-                className="text-4xl font-bold text-emerald-500 mb-2 animate-number"
+                className="text-3xl sm:text-4xl font-bold text-emerald-500 mb-2 animate-number"
                 data-target="50000"
               >
                 0
               </div>
-              <p className="text-gray-700">{t('about.stats.customers')}</p>
+              <p className="text-gray-700 text-sm sm:text-base">{t('about.stats.customers')}</p>
             </div>
             <div>
               <div
-                className="text-4xl font-bold text-emerald-500 mb-2 animate-number"
+                className="text-3xl sm:text-4xl font-bold text-emerald-500 mb-2 animate-number"
                 data-target="200"
               >
                 0
               </div>
-              <p className="text-gray-700">{t('about.stats.models')}</p>
+              <p className="text-gray-700 text-sm sm:text-base">{t('about.stats.models')}</p>
             </div>
             <div>
               <div
-                className="text-4xl font-bold text-emerald-500 mb-2 animate-number"
+                className="text-3xl sm:text-4xl font-bold text-emerald-500 mb-2 animate-number"
                 data-target="15"
               >
                 0
               </div>
-              <p className="text-gray-700">{t('about.stats.countries')}</p>
+              <p className="text-gray-700 text-sm sm:text-base">{t('about.stats.countries')}</p>
             </div>
           </div>
         </div>
-        <div className="mt-16 fade-in-section">
-          <h3 className="text-2xl font-semibold mb-6 text-center">
+        <div className="mt-12 sm:mt-16 fade-in-section">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center">
             {t('about.growth.title')}
           </h3>
-          <div id="sales-chart" className="w-full h-80"></div>
+          <div id="sales-chart" className="w-full h-60 sm:h-80"></div>
         </div>
       </div>
     </section>

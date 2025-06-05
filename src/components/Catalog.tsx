@@ -65,20 +65,20 @@ const Catalog: React.FC = () => {
     : products.filter(product => product.category === t(`catalog.categories.${selectedCategory}`));
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">{t('catalog.title')}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">{t('catalog.subtitle')}</p>
+    <section className="py-12 sm:py-16 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">{t('catalog.title')}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">{t('catalog.subtitle')}</p>
         </div>
 
-        <div className="flex justify-center mb-8">
-          <div className="flex flex-wrap gap-4">
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {categories.map(category => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-2 rounded-full transition-colors ${
+                className={`px-3 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-colors ${
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -90,20 +90,20 @@ const Catalog: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filteredProducts.map(product => (
             <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-gray-600 mb-4">{product.category}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold">{product.price}</span>
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{product.name}</h3>
+                <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">{product.category}</p>
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
+                  <span className="text-xl sm:text-2xl font-bold">{product.price}</span>
+                  <button className="w-full sm:w-auto bg-blue-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full hover:bg-blue-700 transition-colors">
                     {t('catalog.addToCart')}
                   </button>
                 </div>
@@ -112,8 +112,8 @@ const Catalog: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-colors">
+        <div className="text-center mt-8 sm:mt-12">
+          <button className="bg-white text-blue-600 border-2 border-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-full hover:bg-blue-50 transition-colors">
             {t('catalog.showMore')}
           </button>
         </div>

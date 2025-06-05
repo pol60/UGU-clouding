@@ -34,31 +34,31 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-emerald-100 to-teal-100">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 bg-gradient-to-r from-emerald-100 to-teal-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden fade-in-section">
-          <div className="p-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-800">
+          <div className="p-4 sm:p-6 md:p-8">
+            <div className="text-center mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
                 {t('contactForm.title')}
               </h2>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 mt-2 text-sm sm:text-base">
                 {t('contactForm.subtitle')}
               </p>
             </div>
             {isFormSubmitted ? (
-              <div className="text-center py-8">
-                <div className="text-green-500 text-5xl mb-4">
+              <div className="text-center py-6 sm:py-8">
+                <div className="text-green-500 text-4xl sm:text-5xl mb-3 sm:mb-4">
                   <i className="fas fa-check-circle"></i>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{t('contactForm.success.title')}</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{t('contactForm.success.title')}</h3>
+                <p className="text-gray-600 text-sm sm:text-base">
                   {t('contactForm.success.message')}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   <label
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700 mb-2"
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
                       id="phone"
                       value={phone}
                       onChange={handlePhoneChange}
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 text-sm"
+                      className="block w-full pl-10 pr-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 text-sm"
                       placeholder={t('contactForm.phonePlaceholder')}
                       required
                     />
@@ -82,11 +82,11 @@ const ContactForm: React.FC = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-emerald-400 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
+                  className="w-full bg-gradient-to-r from-emerald-400 to-teal-500 text-white py-2.5 sm:py-3 text-sm sm:text-base rounded-lg hover:shadow-lg transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
                 >
                   {t('contactForm.submitButton')}
                 </button>
-                <p className="text-xs text-gray-500 mt-4 text-center">
+                <p className="text-xs text-gray-500 mt-3 sm:mt-4 text-center">
                   {t('contactForm.privacyPolicy')}
                 </p>
               </form>
